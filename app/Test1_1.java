@@ -55,9 +55,14 @@ public class Test1_1 {
 					phone = scanner.nextInt();
 					while (phonekey0.hasNext()) {
 //						int phonenumber2 = phonekey0.next();
-						if((contact.get(phone).getPhone())==phone) {
+
+//					}if (contact.size()==0) {
+//							continue;			
+//					}
+					 if((contact.get(phone).getPhone())==phone) {
+						System.out.println("이미 입력한 번호입니다.");
 					}
-					}
+					 //nullPoint 에러 잡기 
 					
 //							if(phone)  폰번호 같은거 있을때 예외처리 해야함 
 					System.out.println("주소: ");
@@ -70,6 +75,7 @@ public class Test1_1 {
 						number = 0;
 					} else {
 						System.out.println("구분자를 잘못 입력하셨습니다. 다시 입력하세요.");
+					}
 					}
 				} catch (InputMismatchException i) {
 					System.out.println("잘못입력하셨습니다. 다시 입력하세요.");
